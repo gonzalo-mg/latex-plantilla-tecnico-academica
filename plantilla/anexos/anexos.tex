@@ -1,0 +1,14 @@
+% Objetivo del archivo: declarar el inicio de los anexos e incluirlos.
+\appendix% Declaración de inicio de anexos. Todo lo que se incluya a partir de esta línea es parte de los anexos.%
+%
+%
+%	------------------------------------
+%COD	GLOSARIOS
+%-	------------------------------------
+% Al estar tras la declaración de inicio de anexos, los glosarios se consideran como anexos. Al definir cada glosario como un capítulo (\chapter) cada uno es un anexo.
+% Glosario de términos:
+\printunsrtglossary
+% Glosario de siglas y abreviaturas:
+\printunsrtglossary[type=\acronymtype, title=Siglas y Abreviaturas, toctitle=Siglas y Abreviaturas]
+% Glosario de símbolos
+\printunsrtglossary[type=symbols, title=Listado de símbolos, toctitle=Listado de símbolos]

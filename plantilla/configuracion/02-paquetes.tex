@@ -1,0 +1,291 @@
+% Objetivo del archivo: cargar paquetes genéricos con bajo nivel de configuración.
+%
+%COD CODIFICACIÓN
+\usepackage[utf8]{inputenc}
+%
+%COD TRADUCCIÓN DE LITERALES
+% Los literales son los ítems imprimibles generados automáticamente por latex.
+% La traducción se hace mediante la carga del paquete {babel}:
+\usepackage[spanish]{babel}% Multitud de opciones y configuraciones.
+% Sintaxis:
+%\usepackage[IDIOMA]{babel}
+%	[IDIOMA]: idioma al que queremos traducir.
+%	{babeL}: nombre del paquete.
+% La traducción por defecto de los literales al castellano es: Index=Índice ; Table=Cuadro ; Figure=Figura.
+%
+% Se renombran algunos literales para que sean más idiomáticos:
+%	Pies de tablas; por defecto: Cuadros; modificado a: Tabla.
+\addto\captionsspanish{\renewcommand\tablename{Tabla}}
+%	Índice de tablas; por defecto: Índice de cuadros; modificado a: Índice de tablas.
+\addto\captionsspanish{\renewcommand\listtablename{Índice de tablas}}
+%	Entrada de Referencias en el TOC; por defecto: Referencias; modificado a: .
+%\addto\captionsspanish{\renewcommand\bibname{Referencias bibliográficas}}
+%	Anexo; por defecto: Apéndice; modificado a: Anexo.
+\addto\captionsspanish{\renewcommand\appendixname{Anexo}}
+%	Pies de Código; por defecto: Listing; modificado a: Código.
+\addto\captionsspanish{\renewcommand\lstlistingname{Código}}
+% Índice de Código; por defecto Listing; :modificado a: Índice de Códigos.
+\addto\captionsspanish{\renewcommand\lstlistlistingname{Índice de códigos}}
+%
+%COD MODO CITA
+% Para escribir texto formateado al estilo de citas:
+\usepackage{csquotes}% Recomendado cargar tras babel.
+% Sintaxis de uso en texto:
+%	Dos modos de uso:
+%
+%		a) Entorno: crea un párrafo con el contenido en texto más estrecho y centrado, se emplea invocando en el entorno {displayquote}.
+%\begin{displayquote}
+%TEXTO
+%\end{displayquote}
+%
+%		b) En línea: introduce las comillas <<>>, se emplea mediante comando.
+%\textquote{TEXTO}
+%
+%	TEXTO: texto que sE mostrará como cita.
+%
+%COD MATEMÁTICAS
+% GENERAL
+\usepackage{mathtools}% Basado en el paquete amsmath.
+%
+% CANCELACIÓN DE TÉRMINOS
+\usepackage{cancel}
+% Sintaxis de uso en texto:
+%	Dos modos de uso:
+%
+%		a)Cancelar una expresión:
+%\cancel{EXPRESIÓN}
+%
+%		b) Cancelar una expresión e indicar hacia qué término cancela:
+%\cancelto{TÉRMINO}{EXPRESIÓN}
+%
+%	{EXPRESIÓN}: expresión alfanumérica que será cancelada.
+%	{TÉRMINO}: valor hacia el que se cancela {EXPRESIÓN}.
+%
+%COD SÍMBOLOS Y GLIFOS
+\usepackage{wasysym,eurosym,amssymb,circledsteps}
+%
+%OBJETOS Y TABLAS
+\usepackage{import,graphicx,rotating,multicol,caption,subcaption,booktabs,multirow,pdfpages}
+\usepackage[export]{adjustbox}% Permite añadir un marco a las figuras, con la opción "frame" en el comando de invocación de cada figura.
+%\usepackage[table,xcdraw]{xcolor}% Cargar de último por conflictos en el orden de carga.
+%
+%COD TABLAS
+% NOTA: Crear tablas directamente en latex es complicado, se recomienda usar uno de los siguientes métodos:
+%
+%	A) Usar una web o aplicación que permita crear la tabla con una interfaz tipo hoja de cálculo y que la convierta a código latex, para importarlo. Por ejemplo:
+%	http://www.tablesgenerator.com/
+%	https://www.latex-tables.com/#
+%
+%	B) Crear la tabla con otras aplicaciones (editor de textos, hoja de cálculo) y guardarla como una imagen para después insertar esa imagen en el texto englobándola en un entorno de tabla. Mediante un código como:
+%
+%\begin{table}[H]
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[width=1\textwidth, frame]{}
+%	\end{figure}
+%	\caption{}
+%	\label{}
+%\end{table}
+%
+% PERSONALIZACIÓN DE PIES DE FIGURAS Y TABLAS
+\captionsetup{textfont={it},labelfont={bf},labelsep=endash,format=hang,justification=raggedright}% Paquete {caption}; multitud de opciones y configuraciones.
+%
+%COD PDFs
+% Los pdf se incluyen con el paquete pdfpages, y su comando:
+% Sintaxis de uso en texto:
+%\includepdf[⟨key=val⟩]{⟨filename⟩}
+%	key: opción deseada; destacan:
+%		pages: elegir las páginas a insertar; por defecto solo la primera; se declara como; pages={m-n}
+%			m: primera página a incluir
+%			n: última página a incluir
+%		landscape
+%		frame
+%		pagecommand
+%	val: valor de la opción
+%	filename: ruta al pdf deseado.
+%
+%COD MODO APAISADO
+\usepackage{pdflscape}
+% Sintaxis de uso en texto:
+%\begin{landscape}
+% CONTENIDO
+%\end{landscape}
+%
+%	CONTENIDO: Todo lo englobado entre los comandos del entorno se visualizará en una página apaisada, siempre que el visor PDF que se use tenga esa capacidad (en general, todos los modernos).
+%
+% PAQUETES PARA FIGURAS Y TABLAS
+\usepackage{caption,float}
+%
+%COD ENUMERACIONES
+\usepackage{enumitem}% Multitud de opciones y configuraciones.
+% Sintaxis de uso en texto:
+%\begin{enumerate}[label=ETIQUETA]
+%\item CONTENIDO
+%\item CONTENIDO
+%\end{enumerate}
+%	ETIQUETA: argumento que define la etiqueta del listado.
+%		Admite cualquier valor de los siguientes:
+%			\alph*
+%			\Alph*
+%			\arabic*
+%			\roman*
+%			\Roman*
+%		La etiqueta puede afectarse por los comandos de negrita, itálica, etc, y ser acompañados por caractéres como paréntesis, corchetes, letras, palabras; por ejemplo: [label=\alph*)];[label=(\Alph*)];[label=\roman*)];[label=Tipo verde \Roman*)].
+%
+% Por defecto las enumeraciones siguen la jerarquía:
+% Nivel 1: números arábigos (1, 2, 3, ...).
+% Nivel 2: letras latinas minúsculas (a, b, c, ...).
+% Nivel 3: números romanos minúsculos (i, ii, iii, ...).
+% Nivel 4: letras latinas mayúsculas (A, B, C, ...).
+%
+%COD ÍNDICES
+%
+% Nota sobre nomenclatura: TOC = Table Of Contents = Índice de contenidos general
+%
+% La jerarquía de organización del texto en latex es:
+% Nº.Nombre			{índice que identidfica el nivel en los comandos}
+% 1.Parte				{0}
+% 1.1.Capítulo			{1}
+% 1.1.1.Sección		{2}
+% 1.1.1.1.Subsección	{3}
+% 1.1.1.1.1.Párrafo		{4}
+% 1.1.1.1.1.1.Subpárrafo	{5}
+%
+% PROFUNDIAD DE LA JERARQUÍA
+% Con lo siguientes comandos se puede modificar hasta qué nivel se incluye en el TOC, y hasta qué nivel se asignan números de jerarquía (que aparecerán en el propio texto con los títulos). Estos parámetros se puden ajustar de manera independiente, modificando los índices. Por ejemplo, podemos hacer que se asignen números de jerarquía hasta los subpárrafos, pero inlcuir en el TOC solo hasta las subsecciones.
+%
+%	a) Profundidad de niveles incluidos en el TOC
+\setcounter{tocdepth}{5}
+%	b) Profundidad de la numeración de la jerarquía:
+\setcounter{secnumdepth}{5}
+%
+% Por defecto los títulos de \paragraph y \subparagraph se comportan de manera diferente al resto, siendo el texto escrito inmediatamente a continuación del título. Los siguientes comandos hacen que se comporten como los demás, separando el título del texto.
+\usepackage{titlesec}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%
+\titleformat{\subparagraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%
+% AÑADIR AUTOMÁTICAMENTE ENTRADAS EN EL TOC
+\usepackage{tocbibind}% Permite añadir automáticamente la Bibliografía e Índices de Figuras y Tablas invocando los siguientes comandos en el \LaTeX:
+%\tableofcontents
+%\listoffigures
+%\listoftables
+%
+% AÑADIR MANUALMENTE ENTRADAS EN EL TOC
+% Se pueden añadir otros items al índice a voluntad invocando el siguiente comando junto con el item que se desee añadir.
+% Sintaxis de uso en texto:
+%\addcontentsline{ÍNDICE}{NIVEL}{TEXTO_ENTRADA}
+%	{ÍNDICE}: a qué índice queremos añadir el ítem: toc, pln, tot, tof
+%	{NIVEL}: opción con la que se establece con qué nivel se corresponde el item añadido: part; chapter; section; subsection ...
+%	{TEXTO_ENTRADA}: texto que aparecerá en el TOC.
+%
+% LISTAS PERSONALIZADAS
+\usepackage{tocloft}% Permite crear listas e índices personalizados. Multitud de opciones y configuraciones.
+% https://texblog.org/2008/07/13/define-your-own-list-of/
+%
+%
+%COD ÍNDICE DE PLANOS
+% Sintaxis de uso en texto:
+% 1) Imprimir el índice de planos:
+% Índice de planos
+%\newpage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Índice de planos}%incluir entrada en el índice general.
+%\listofplano%imprimir índcide de planos.
+% 2) Invocar una nueva entrada en el índice de planos para separar conjuntos de planos:
+%\conjuntoplanos{TITULO}
+% 3) Invocar un nuevo plano:
+%\plano{TITULO}
+%
+% He creado una lista personalizada para crear un sistema que permita confeccionar un índice de planos invocando estos mediante el comando "\plano{}".
+% Creación del sistema:
+%	Creación del índice de planos:
+\newcommand{\listplano}{% "\listplano" invoca la creación del "Índice de planos" (equivalente a invocar el TOC).
+	{\huge \textbf{Índice de planos}}%formato del título.
+}
+%	Creación del mecanismo de registro de planos:
+\newlistof{plano}{pln}{\listplano}% creo una lista de elementos "pln" para registar los planos como ítems particulares.
+\newcommand{\plano}[1]{% creo el nuevo comando
+	\refstepcounter{plano}% creo un contador para registrar los elementos tipo plano.
+	\newpage%crear una página nueva para el plano.
+	\par\noindent\textbf{Plano \theplano. #1}% añadir un título (caption) en el cuerpo del texto al plano.
+	\addcontentsline{pln}{plano}{\protect\numberline{\theplano}#1}\par% añadir entrada en el índice de planos para cada plano insertado con "\plano{}".
+}
+%
+%	Creación del mecanismo de registro de conjuntos de planos:
+\newcommand{\conjuntoplanos}[1]{% creo el nuevo comando
+%	\newpage%crear una página nueva para el titulo de conjunto.
+%	\par\noindent\textbf{{\LARGE #1}}% añadir un título (caption) en el cuerpo del texto al plano.
+	\addcontentsline{pln}{chapter}{#1}% añadir entrada en el índice de planos .
+}
+%
+%COD RESALTAR, COMENTARIOS Y NOTAS
+%Resaltar texto:
+\usepackage{soulutf8}%https://tex.stackexchange.com/questions/160220/french-accents-in-hl-from-soul-package
+\newcommand{\hlc}[2][yellow]{{\sethlcolor{#1}\hl{#2}}}%https://tex.stackexchange.com/questions/352956/how-to-highlight-text-with-an-arbitrary-color
+%
+% Sintaxis de uso en texto:
+% \hlc[COLOR]{TEXTO}
+%	[COLOR]: color del resalte; debe ser uno de los colores típicos definidos en latex, en inglés.
+%	{TEXTO}: texto a resaltar.
+%
+\usepackage{easyReview}
+%
+%
+\usepackage{todonotes}
+%\usepackage[spanish, colorinlistoftodos, bordercolor=black, backgroundcolor=orange, textcolor=black, linecolor=orange, textsize=tiny]{todonotes}
+% Permite añadir notas tipo "Pendidente" al \LaTeX. Multitud de opciones y configuraciones.
+% Sintaxis para crear un índice de notas:
+%\todototoc
+%\listoftodos
+% Estos dos comandos deben usarse en el orden indicado en la sección de índices para invocar y crear el índice de notas.
+%
+% Sintaxis de uso en texto por defecto para crear notas en el texto:
+%\todo[KEY]{TEXTO}
+%	[KEY]: opciones a aplicar a la nota, desde colores, bordes, tamaño de fuente, etc.
+%	{TEXTO}: el texto de la nota.
+%\missingfigure{TEXTO}% añade una "nota" como si fuese una figura pendiente de insertar.
+%
+%COD CODIGO (IMPORTACIÓN DE CÓDIGO)
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{defecto}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{
+	style=defecto,
+	literate=%añade caracteres no estándar; el paquete listings por defecto no los contempla.
+	{Á}{{\'A}}1
+	{á}{{\'a}}1
+	{é}{{\'e}}1
+	{É}{{\'E}}1
+	{Í}{{\'I}}1
+	{í}{{\'i}}1
+	{Ó}{{\'O}}1
+	{ó}{{\'o}}1
+	{Ú}{{\'U}}1
+	{ú}{{\'u}}1
+	{Ñ}{{\'N}}1
+	{ñ}{{\'n}}1
+}
+%

@@ -1,0 +1,19 @@
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{1\textwidth}
+		\centering
+		\includegraphics[width=0.75\textwidth]{cuerpo/cap-objetos/imagenes/hoi4-afrika-korps}
+		\caption{Afrika korps.}
+		\label{fig:hoi4-afrika-korps}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{1\textwidth}
+		\centering
+		\includegraphics[width=0.75\textwidth]{cuerpo/cap-objetos/imagenes/hoi4-soviet-tanks}
+		\caption{Tanques soviéticos.}
+		\label{fig:hoi4-soviet-tanks}
+	\end{subfigure}
+	%
+	\caption[Figura con 2 subfiguras - ejemplo 2.]{Figura con 2 subfiguras - ejemplo 2. Figuras alineadas inferiormente y en diferentes lineas. Tanques en la Segunda Guerra Mundial.}
+	\label{fig:tanques}
+\end{figure}

@@ -1,0 +1,2 @@
+Por ejemplo, si esto es un párrafo en el cual queremos integrar una expresión matemática como $ y = mb + c$, de forma que quede en linea con el resto del texto.
+\lstinputlisting[frame={single}, language={[AlLaTeX]TeX}, label={cod-entorno-mat}, caption=Código del párrafo \ref{sec:entorno-matematico}.]{cuerpo/cap-objetos/codigos/mates-entorno-mat.txt}

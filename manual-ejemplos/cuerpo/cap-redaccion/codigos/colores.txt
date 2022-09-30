@@ -1,0 +1,13 @@
+\color{blue}
+\colorbox{red}{Este texto debiera ser azul y estar resaltado de rojo.}
+
+\fcolorbox{green}{brown}{Este texto debiera estar resaltado de marrón, con borde blanco. La fuente es azul debido al comando color de la frase anterior.}
+
+\fcolorbox{black}{green}{Este texto debiera estar resaltado de verde, con borde negro. La fuente es azul debido al comando color de la frase anterior.}
+
+\colorbox{orange}{Este texto debiera estar resaltado de naranja. La fuente es azul debido al comando color de la frase anterior.}
+
+\color{black}
+Este texto debiera ser normal otra vez. Es negro porque se ha declarado un \textbackslash\textit{color\{black\}}.
+
+\textcolor{green}{Este texto debiera ser verde; con \textit{textcolor}.}

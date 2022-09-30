@@ -1,0 +1,18 @@
+﻿\begin{landscape}
+	\begin{figure}
+		\centering
+		\begin{subfigure}[t]{.5\textwidth}
+			\includegraphics[width=\textwidth, frame]{cuerpo/cap-objetos/imagenes/juana-arco}
+			\caption[Jean d'Arc]{Jean d'Arc. Grabado de Albert Lynch.}
+			\label{fig:juana-arco}
+		\end{subfigure}
+	%
+		\begin{subfigure}[t]{0.5\textwidth}
+			\includegraphics[width=\textwidth, frame]{cuerpo/cap-objetos/imagenes/eleanor-aquitania}
+			\caption[Eleanor de Aquitania.]{Eleanor de Aquitania. Pintura de Frederick Sandys.}
+			\label{fig:eleanor-aquitania}
+		\end{subfigure}
+	\caption[Subfiguras en modo apaisado.]{Subfiguras en modo apaisado. Mujeres francesas del medievo.}
+	\label{fig:subfiguras-apaisadas}
+	\end{figure}
+\end{landscape}

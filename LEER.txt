@@ -1,0 +1,51 @@
+Versión 10.
+Gonzalo Martínez González.
+
+Para documentos extensos (tipo tesis o informes amplios) la plantilla es "plantilla-largos.tex"; se basa en el tipo "report" y se organiza en partes y capítulos.
+Para documentos cortos (tipo informes pequeños, redacciones, o tareas académicas) la plantilla es "plantilla-cortos.tex"; se basa en el tipo "article" y se organiza por secciones.
+
+Estas plantillas están configuradas para ser empleadas con el perfil de configuración de TeXstudio asociado: perfil-texstudio-gon.txsprof, que establece un directorio de compilación ("compilacion") en el que TeXstudio guarda todos los archivos que genera, incluido el .pdf, para así mantener limpio el directorio de trabajo.
+
+El directorio de trabajo que sirve de estructura de la plantilla, y en el que se encuentra el archivo raíz tiene la siguiente estructura:
+.../directorio-latex
+	.../anexos
+	.../bibliografia
+		.../bibliografia.BIB
+		.../bibliografia.tex
+	.../compilacion
+		.../raiz.pdf
+	.../configuracion
+		.../01-fuente-y-geometria.tex
+		.../02-paquetes.tex
+		.../03-encabezados.tex
+		.../04-marcas-agua.tex
+		.../05-gestion-bibliografia.tex
+		.../06-gestion-glosarios.tex
+		.../07-numeros-linea.tex
+		.../99bis-metadatos.tex
+		.../99-enlaces.tex
+	.../cuerpo
+		.../cuerpo.tex
+		.../cap-xx
+			.../codigos
+			.../imagenes
+			.../pdfs
+			.../planos
+			.../tablas
+			.../cap-xx.tex
+	.../glosarios
+		.../siglas.tex
+		.../simbolos.tex
+		.../terminos.tex
+	.../planos
+		.../planos.tex
+		.../plano-xx.pdf
+	.../secciones-iniciales
+		.../abstractos.tex
+		.../agradecimientos.tex
+		.../declaracion-no-plagio.tex
+		.../dedicatoria.tex
+		.../indices.tex
+		.../lista-pendientes.tex
+		.../portada.tex
+	.../plantilla.tex

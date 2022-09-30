@@ -1,0 +1,1 @@
+\lstinputlisting[language={[DIALECTO]LENGUAJE}, label={LABEL}, caption={TEXTO-PIE}, frame={single}, float]{RUTA}

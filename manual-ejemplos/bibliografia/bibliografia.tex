@@ -1,0 +1,14 @@
+% Objetivo del archivo: imprimir la bibliografía; establecer los títulos y las palabras clave para segregar las referencias.
+%
+%--------------------------------------------------------------------------
+%	BIBLIOGRAFÍA
+%--------------------------------------------------------------------------
+%
+%	a) Por entorno BibLaTeX
+% Solo es necesario especificar los comandos de impresión, ya que la información de las referencias se amacena en los archivos .BIB y se invocan en el texto.
+\part{Bibliografía}
+\nocite{*}
+\printbibheading
+\printbibliography[category=cited,heading=subbibliography,title={Referencias}]
+\printbibliography[notcategory=cited,notkeyword={nor},heading=subbibliography,title={Bibliografía}]
+\printbibliography[notcategory=cited,keyword={nor},heading=subbibliography,title={Normativa}]

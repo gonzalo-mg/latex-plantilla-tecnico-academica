@@ -1,0 +1,115 @@
+% % Objetivo del archivo: actuar como archivo raíz para centralizar la configuración, carga de paquetes, especificaciones de la estructura y carga de archivos de redacción.
+%
+%--------------------------------------------------------------------------
+%COD	CLASE DE \LaTeX
+%--------------------------------------------------------------------------
+\documentclass[12pt,a4paper,oneside]{report}
+% Sintaxis:
+%\documentclass[TAMAÑO-DE-LETRA, FORMATO-HOJA, COLUMNAS, CARILLAS, NUEVO-CAPITULO, MODO-TITULO, APAISADO, ALINEAR-ECUACIONES, MODO-BORRADOR]{TIPO}
+%	TAMAÑO-DE-LETRA: tamaño de la tipografía en puntos.
+%		Sintaxis: Npt
+%			N: número
+%			pt ; indica la unidad 'punto tipográfico'.
+%	FORMATO-HOJA: tamaño de la hoja del \LaTeX. Argumentos válidos típicos (consultar web para más info): a4paper, letterpaper, a5paper, b5paper, legalpaper.
+%	COLUMNAS: imprimir a una o dos columnas. Argumentos válidos: onecolumn, twocolumn.
+%	CARILLAS: imprimir a una o dos carillas; a dos altera la simetría de los márgenes entre páginas pares e impares. Argumentos válidos: oneside, twoside.
+%	NUEVO-CAPITULO: para documentos 'twoside' regula si un nuevo capitulo puede empezar en cualquier página o solo en impares. Argumentos válidos: openany, openright.
+%	MODO-TITULO: indica si el título del \LaTeX debe ir en una página propia, o en la misma en la que empieza el texto. Argumentos válidos: notitlepage, titlepage.
+%	APAISADO: no modifica los márgenes, por lo que es mejor emplear el paquete pdflscape. Argumento válido: landscape.
+%	ALINEAR-ECUACIONES: por defecto las ecuaciones se centran y se numeran a la derecha; para cambiarlo se admiten hasta dos argumentos:
+%		fleqn: formulas alineadas a la izquierda.
+%		leqno: etiquetas alineadas a la izquierda.
+%	MODO-BORRADOR: acelera la compilación al no cargar las imágenes, sustituyéndolas por un recuadro de tamaño equivalente y otros detalles. Argumentos válidos: draft, final.
+%
+%	TIPO: tipo de LaTeX. Argumentos válidos típicos (consultar web para más info):
+%		report: LaTeX largos; tipo tesis académica.
+%		book: libros.
+%		article: artículos.
+%
+%	No todas las opciones son obligatorias, y la mayoría contienen un valor por defecto.
+%--------------------------------------------------------------------------
+%COD	FUENTE Y GEOMETRÍA
+%--------------------------------------------------------------------------
+\input{configuracion/01-fuente-y-geometria.tex}
+%
+%--------------------------------------------------------------------------
+%COD	PAQUETES ESTÁNDAR
+%--------------------------------------------------------------------------
+\input{configuracion/02-paquetes.tex}
+%
+%--------------------------------------------------------------------------
+%COD	PAQUETES ESPECÍFICOS
+%--------------------------------------------------------------------------
+\input{configuracion/03-encabezados.tex}
+\input{configuracion/04-marcas-agua.tex}
+\input{configuracion/05-gestion-bibliografia.tex}
+\input{configuracion/06-gestion-glosarios.tex}
+\input{configuracion/07-numeros-linea.tex}
+\input{configuracion/99-enlaces.tex}
+\input{configuracion/99bis-metadatos.tex}
+%
+%--------------------------------------------------------------------------
+%COD	APERTURA DEL \LaTeX
+%--------------------------------------------------------------------------
+\begin{document}% Declaración de inicio del \LaTeX imprimible.
+%
+%--------------------------------------------------------------------------
+%COD	PORTADA
+%--------------------------------------------------------------------------
+\clearpage\pagenumbering{roman}% Numeración romana minúscula para la portada.
+%
+\input{secciones-iniciales/portada.tex}
+%
+%--------------------------------------------------------------------------
+%COD	SECCIONES INICIALES
+%--------------------------------------------------------------------------
+\clearpage\pagenumbering{Roman}% Numeración romana mayúscula para las secciones iniciales.
+%
+% Lista de tareas pendientes:
+\input{secciones-iniciales/lista-pendientes.tex}
+% Declaración de no plagio:
+\input{secciones-iniciales/declaracion-no-plagio.tex}
+% Abstractos:
+\input{secciones-iniciales/abstractos.tex}
+% Agradecimientos:
+\input{secciones-iniciales/agradecimientos.tex}
+% Índices de Contenidos (TOC), Figuras, Tablas, Planos:
+\input{secciones-iniciales/indices.tex}
+% Dedicatoria:
+\input{secciones-iniciales/dedicatoria.tex}
+%
+%--------------------------------------------------------------------------
+%COD	CUERPO DEL TEXTO
+%--------------------------------------------------------------------------
+\clearpage\pagenumbering{arabic}% Numeración arábiga para el resto del \LaTeX.
+\input{cuerpo/cuerpo.tex}
+%
+%--------------------------------------------------------------------------
+%COD	PLANOS
+%--------------------------------------------------------------------------
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}% Modificar la profundidad del Índice de Contenidos, desde este línea en adelante incluir solo hasta \chapter; así no salen los planos individuales en el ToC general, si no por Conjunto de planos (Capítulos).
+%
+\input{planos/planos.tex}
+%
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}}% Restaurar profundidad del ToC.
+%
+%--------------------------------------------------------------------------
+%COD	BIBLIOGRAFÍA
+%--------------------------------------------------------------------------
+\input{bibliografia/bibliografia.tex}
+%
+%--------------------------------------------------------------------------
+%COD	ANEXOS
+%--------------------------------------------------------------------------
+\appendix% Declaración de inicio de anexos. Todo lo que se incluya a partir de esta línea es parte de los anexos.
+\input{anexos/anexos}
+%
+%--------------------------------------------------------------------------
+%
+%--------------------------------------------------------------------------
+%	CIERRE DEL \LaTeX
+%--------------------------------------------------------------------------
+\end{document}% Declaración de fin del \LaTeX imprimible.
+%
+%--------------------------------------------------------------------------
+%	FIN DEL \LaTeX

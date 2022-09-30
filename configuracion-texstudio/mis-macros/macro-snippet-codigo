@@ -1,0 +1,15 @@
+{
+    "abbrev": "",
+    "description": [
+        "Add a snippet of code."
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Include snippet",
+    "shortcut": "",
+    "tag": [
+        "\\lstinputlisting[language ={[DIALECTO] LENGUAJE} , label ={LABEL} , caption ={",
+        "TEXTO - PIE } , frame ={ single } , float ]{RUTA}"
+    ],
+    "trigger": ""
+}

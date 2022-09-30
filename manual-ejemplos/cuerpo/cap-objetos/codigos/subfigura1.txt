@@ -1,0 +1,18 @@
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cuerpo/cap-objetos/imagenes/hoi4-convoy-raiding}
+		\caption{Uboat atacando convoy.}
+		\label{fig:hoi4-convoy-raiding}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cuerpo/cap-objetos/imagenes/hoi4-aeronaval-battle}
+		\caption{Torpedero naval atacando acorazado.}
+		\label{fig:hoi4-aeronaval-battle}
+	\end{subfigure}
+	\caption[Figura con 2 subfiguras - ejemplo 1.]{Figura con 2 subfiguras - ejemplo 1. Figuras alineadas inferiormente y en una misma linea. Batallas aeronavales de la Segunda Guerra Mundial.}
+	\label{fig:aeronavales}
+\end{figure}

@@ -1,0 +1,6 @@
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth, frame]{cuerpo/cap-objetos/imagenes/mapa-fisico}
+	\caption[Figura rotada 0.]{Figura rotada 0. Original: esta es la imagen en su posición original, con el tamaño ajustado al ancho de linea.}
+	\label{fig:mapa-fisico-orig}
+\end{figure}

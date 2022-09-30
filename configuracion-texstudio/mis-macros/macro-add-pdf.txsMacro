@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        "Include pdf document."
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Include pdf",
+    "shortcut": "",
+    "tag": [
+        "\\includepdf[scale=0.95, pages={-}, pagecommand={}]{RUTA}"
+    ],
+    "trigger": ""
+}

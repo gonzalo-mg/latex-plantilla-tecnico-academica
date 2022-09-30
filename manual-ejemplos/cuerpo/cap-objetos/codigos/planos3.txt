@@ -1,0 +1,6 @@
+% Incluir un título de plano:
+\plano{Texto del título del plano}
+% Inlcuir un plano como .pdf:
+\begin{figure}
+	\includepdf[scale=X, landscape, pagecommand={}]{RUTA}
+\end{figure}

@@ -1,0 +1,28 @@
+% Objetivo del archivo: cargar y definir los parámetros básicos del paquete.
+%
+\usepackage[bookmarksnumbered]{hyperref}
+% Permite crear enlaces externos e internos.
+% Este paquete debería cargarse el último según su documentación y recomendaciones generales de la comunidad.
+% Multitud de opciones y configuraciones.
+%
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,%enlaces y referencias internas (índices, refs a figuras y secciones)
+	urlcolor=cyan,
+	citecolor=green,
+	filecolor=magenta,
+	menucolor=red,
+	runcolor=brown,
+}
+% Tiene dos modos de uso:
+%
+%	A) Enlace-etiqueta: crea el enlace mostrando una etiqueta (texto) y no la dirección de enlace.
+% Sintaxis de uso en texto:
+%\hyperref{URL}{TEXTO}
+%	{URL}: es la dirección URL (para enlace externo) o etiqueta ("label") (para enlace interno) a donde queremos que se dirija el enlace.
+%	{TEXTO}: es el texto que se mostrará en el \LaTeX como enlace.
+%
+%	B) Enlace-directo: crea el link escribiendo la url "tal cual" (para imprimir la dirección del enlace).
+% Sintaxis de uso en texto:
+%\url{URL}
+%	{URL}: es la dirección a la que queremos enlazar, y que se mostrará en el texto.

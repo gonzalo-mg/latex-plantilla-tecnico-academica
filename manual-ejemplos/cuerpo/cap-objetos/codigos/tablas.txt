@@ -1,0 +1,29 @@
+\begin{table}[H]
+	\centering
+	\begin{tabular}{@{}lll@{}}
+		\toprule
+		Variable & Valor & Unidad \\ \midrule
+		X        & 20    & N      \\
+		Y        & 100   & kg     \\
+		Z        & 0     & cm     \\ \bottomrule
+	\end{tabular}
+	\caption[Tabla creada con \url{https://www.tablesgenerator.com/}.]{Tabla creada con \url{https://www.tablesgenerator.com/}. Copiada directamente al documento.}
+	\label{tab:tabla-1}
+\end{table}
+%
+%tab:tabla-2
+\input{cuerpo/cap-objetos/tablas/tabla-ejemplo2}
+%
+\begin{table}[H]
+	\centering
+	\includegraphics[scale=1]{cuerpo/cap-objetos/tablas/tabla-imagen-calc}
+	\caption{Tabla desde una imagen.}
+	\label{tab:tabla-3}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\includegraphics[width=1\textwidth, frame]{cuerpo/cap-objetos/tablas/tablas}
+	\caption[Tabla desde una imagen bis.]{Tabla desde una imagen bis. Esta imagen es tratada como una tabla, apareciendo en el índice de tablas, y contando como tal par las referencias. La diferencia entre los entornos 'table' y 'figure' es puramente de distinción de items.}
+	\label{tab:tabla-4}
+\end{table}

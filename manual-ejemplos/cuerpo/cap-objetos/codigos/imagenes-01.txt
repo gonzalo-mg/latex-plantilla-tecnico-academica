@@ -1,0 +1,30 @@
+﻿Se incluyen a continuación ejemplos de disposiciones frecuentes de imágenes.
+%
+% TODO: \usepackage{graphicx} required
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1.5, frame]{cuerpo/cap-objetos/imagenes/robotdevil.jpg}
+	\caption[Imagen simple.]{Imagen simple. Una única imagen.}
+	\label{fig:robotdevil}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.5]{cuerpo/cap-objetos/imagenes/grafico-de-barras}
+	\caption[Gráfico simple.]{Gráfico simple. Un gráfico, con fondo blanco y sin borde en la imagen fuente.}
+	\label{fig:grafico-de-barras}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.5, frame]{cuerpo/cap-objetos/imagenes/grafico-de-barras}
+	\caption[Gráfico simple.]{Gráfico simple. Un gráfico, con fondo blanco y sin borde en la imagen fuente, pero con el borde añadido en latex; por defecto esta plantilla añade el borde.}
+	\label{fig:grafico-de-barras-bis}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1, frame]{cuerpo/cap-objetos/imagenes/grafico-multiple}
+	\caption[Gráfico simple.]{Gráfico no tan simple. Un gráfico cuya imagen fuente es un collage de varios gráficos, por lo que en realidad es un único objeto.}
+	\label{fig:grafico-multiple}
+\end{figure}

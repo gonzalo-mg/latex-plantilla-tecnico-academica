@@ -1,0 +1,13 @@
+En este párrafo ponemos unos ejemplos; lorem ipsum lorem ipsum lorem ipsum; y aquí queremos una expresión matemática numerada:
+\begin{equation}\label{ec-2-ley-newton}
+	\sum \vec{F} = m \cdot \vec{a}
+\end{equation}
+Otro ejemplo más:
+\begin{equation}\label{ec-einstein}
+	e = mc^{2}
+\end{equation}
+
+Y para que no lleven etiqueta de numeración:
+\begin{equation*}\label{ec-ley-ohm}
+	V = I \cdot R
+\end{equation*}

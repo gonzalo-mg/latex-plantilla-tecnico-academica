@@ -1,0 +1,4 @@
+https://es.overleaf.com/learn/how-to/Understanding_underfull_and_overfull_box_warnings
+
+Ordenar glosarios:
+https://tex.stackexchange.com/questions/447121/glossaries-list-of-abbreviations-alphabetically-ordered-and-list-of-symbols

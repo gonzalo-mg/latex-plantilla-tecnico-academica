@@ -1,0 +1,122 @@
+﻿%COD	CLASE DE DOCUMENTO
+%--------------------------------------------------------------------------
+\documentclass[12pt,a4paper]{report}% Multitud de opciones y configuraciones.
+% Sintaxis:
+%\documentclass[TAMAÑO-DE-LETRA,FORMATO-HOJA]{TIPO}
+%	TAMAÑO-DE-LETRA: tamaño de la tipografía en puntos.
+%	FORMATO-HOJA: tamaño de la hoja del documento.
+%	TIPO: tipo de documento.
+%
+%--------------------------------------------------------------------------
+%COD	FUENTE Y GEOMETRÍA
+%--------------------------------------------------------------------------
+\input{configuracion/01-fuente-y-geometria.tex}
+%
+%--------------------------------------------------------------------------
+%COD	PAQUETES ESTÁNDAR
+%--------------------------------------------------------------------------
+\input{configuracion/02-paquetes.tex}
+%
+%--------------------------------------------------------------------------
+%COD	PAQUETES ESPECÍFICOS
+%--------------------------------------------------------------------------
+\input{configuracion/03-encabezados.tex}
+\input{configuracion/04-marcas-agua.tex}
+\input{configuracion/05-gestion-bibliografia.tex}
+\input{configuracion/06-gestion-glosarios.tex}
+\input{configuracion/07-numeros-linea.tex}
+\input{configuracion/99-enlaces.tex}
+\input{configuracion/99bis-metadatos.tex}
+%
+%--------------------------------------------------------------------------
+%COD	APERTURA DEL DOCUMENTO
+%--------------------------------------------------------------------------
+\begin{document}% Declaración de inicio del documento imprimible.
+%
+%--------------------------------------------------------------------------
+%COD	PORTADA
+%--------------------------------------------------------------------------
+\clearpage\pagenumbering{roman}% Numeración romana minúscula para la portada.
+%
+\input{secciones-iniciales/portada.tex}
+%
+%--------------------------------------------------------------------------
+%COD	SECCIONES INICIALES
+%--------------------------------------------------------------------------
+\clearpage\pagenumbering{Roman}% Numeración romana mayúscula para las secciones iniciales.
+%
+% Lista de tareas pendientes:
+\input{secciones-iniciales/lista-pendientes.tex}
+% Declaración de no plagio:
+\input{secciones-iniciales/declaracion-no-plagio.tex}
+% Abstractos:
+\input{secciones-iniciales/abstractos.tex}
+% Agradecimientos:
+\input{secciones-iniciales/agradecimientos.tex}
+% Índices de Contenidos (TOC), Figuras, Tablas, Planos:
+\input{secciones-iniciales/indices.tex}
+% Dedicatoria:
+\input{secciones-iniciales/dedicatoria.tex}
+%
+%--------------------------------------------------------------------------
+%COD	CUERPO DEL TEXTO
+%--------------------------------------------------------------------------
+\clearpage\pagenumbering{arabic}% Numeración arábiga para el resto del documento.
+%
+\part{Introducción}
+\input{cuerpo/cap-objetivos/objetivos.tex}
+%
+\part{Directorio y estructura}
+\input{cuerpo/cap-directorio/directorio.tex}
+\part{Redacción}
+\input{cuerpo/cap-redaccion/redaccion.tex}
+%
+\part{Uso y gestión de objetos}
+%
+\part{Uso y gestión de referencias}
+%bibliograficas e internas
+%
+%--------------------------------------------------------------------------
+%COD	PLANOS
+%--------------------------------------------------------------------------
+\part{Planos}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}% Modificar la profundidad del Índice de Contenidos, desde este línea en adelante incluir solo hasta \chapter; así no salen los planos individuales en el ToC general, si no por Conjunto de planos (Capítulos).
+%
+\input{planos/planos.tex}
+%
+\addtocontents{toc}{\protect\setcounter{tocdepth}{4}}% Restaurar profundidad del ToC.
+%
+%--------------------------------------------------------------------------
+%COD	BIBLIOGRAFÍA
+%--------------------------------------------------------------------------
+\part{Referencias y Bibliografía}
+%
+\input{bibliografia/bibliografia.tex}
+%
+%--------------------------------------------------------------------------
+%COD	ANEXOS
+%--------------------------------------------------------------------------
+\part{Anexos}
+\appendix% Declaración de inicio de anexos. Todo lo que se incluya a partir de esta línea es parte de los anexos.
+%
+%	------------------------------------
+%COD	GLOSARIOS
+%-	------------------------------------
+% Al estar tras la declaración de inicio de anexos, los glosarios se consideran como anexos. Al definir cada glosario como un capítulo (\chapter) cada uno es un anexo.
+% Glosario de términos:
+\printunsrtglossary
+% Glosario de siglas y abreviaturas:
+\printunsrtglossary[type=\acronymtype, title=Siglas y Abreviaturas, toctitle=Siglas y Abreviaturas]
+% Glosario de símbolos
+\printunsrtglossary[type=symbols, title=Listado de símbolos, toctitle=Listado de símbolos]
+%
+%--------------------------------------------------------------------------
+%
+%--------------------------------------------------------------------------
+%	CIERRE DEL DOCUMENTO
+%--------------------------------------------------------------------------
+\end{document}% Declaración de fin del documento imprimible.
+%
+%--------------------------------------------------------------------------
+%	FIN DEL DOCUMENTO
+%--------------------------------------------------------------------------

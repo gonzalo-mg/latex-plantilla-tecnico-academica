@@ -1,0 +1,6 @@
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.65, frame, angle=90]{cuerpo/cap-objetos/imagenes/mapa-fisico}
+	\caption[Figura rotada 2.]{Figura rotada 2.  \textit{Método comando <<angle>>}: la imagen se rota 90\textdegree{} para aparecer apaisada, pero la página y el pie de página no. El tamaño se ha ajustado a un 65\% del tamaño original.}
+	\label{fig:mapa-fisico-a2}
+\end{figure}

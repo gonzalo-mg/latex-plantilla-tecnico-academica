@@ -1,0 +1,6 @@
+\begin{sidewaysfigure}
+	\centering
+	\includegraphics[width=\textwidth, frame]{cuerpo/cap-objetos/imagenes/mapa-fisico}
+	\caption[Figura rotada 3.]{Figura rotada 3. \textit{Método entorno <<sidewaysfigure>>}: la imagen se rota automáticamente para aparecer apaisada, junto con el pie de página, pero la página en sí no. El tamaño se ha ajustado al ancho de linea.}
+	\label{fig:mapa-fisico3}
+\end{sidewaysfigure}

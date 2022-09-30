@@ -1,0 +1,4 @@
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Índice de planos}% incluir entrada en TOC
+\listofplano% imprimir índice de planos

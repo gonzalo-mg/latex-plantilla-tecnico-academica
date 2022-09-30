@@ -1,0 +1,32 @@
+% Objetivo del archivo: cargar paquetes y definir los parámetros de la gestión bibliográfica mediante biblatex.
+% Las referencias bibliográficas en biblatex se almacenan en archivos de texto tipo .BIB que se definen según una estructura predeterminada y deben ser cargados al \LaTeX para poder invocar las referencias.
+%
+%--------------------------------------------------------------------------
+%	GESTIÓN DE LA BIBLIOGRAFÍA POR BIBLATEX
+%--------------------------------------------------------------------------
+\usepackage[style=iso-numeric,defernumbers=true]{biblatex}% Multitud de opciones y configuraciones.
+% Sintaxis:
+%\usepackage[style=ESTILO]{biblatex}
+%	ESTILO: valor de la opción que determina el estilo de citación a aplicar; existen varios estilos predetermiados en el paquete, a modo de ejemplo:
+%		iso-numeric: estilo basado en las recomendaciones de norma ISO con clave numérica.
+%		apa6: estilo basado en normas APA 6ª edición.
+%
+% Renombre de algunos literales al castellano:
+\DefineBibliographyStrings{spanish}{
+	online = {en línea}
+}
+%
+\DefineBibliographyStrings{spanish}{
+	urlalso = {url}
+}
+%
+% Automatización de la segregación en Referencias y Bibliografía.
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+%
+%
+%COD ARCHIVOS .BIB
+%
+% Carga de los archivos .BIB que conforman la base de datos bibliográfica (se admiten varios archivos):
+\addbibresource{bibliografia/bibliografia.BIB}
+% Recomendación para automatizar la creación de archivos .bib: https://www.mybib.com

@@ -1,0 +1,13 @@
+\chapter{Ejemplos de referencias y citas}\label{{cap:ejemplos de referencias y citas}
+
+Este es un párrafo sobre Julio César, y en este punto citamos un dato sobre la guerra de las Galias que hemos sacado de una edición de \textit{De bello Gallico}, el dato es X \cite{juliocesar}. Esta guerra acabó tras el asedio de Alesia, con la rendición de los galos liderados por Vercingetorix, escena recreada en el cuadro \ref{fig:rendicion-alesia}. El código empleado se muestra en el fragmento \ref{cod-cesar}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth, frame]{cuerpo/cap-referencias/imagenes/rendicion-alesia}
+	\caption[Vercingetorix rinde sus armas a los pies de Julio César.]{Vercingetorix rinde sus armas a los pies de Jilio César. Cuadro de Lionel Royer. Fuente: \cite{cuadro-rendicion-alesia}.}
+	\label{fig:rendicion-alesia}
+\end{figure}
+%
+\newpage
+\lstinputlisting[language=tex, label={cod-cesar}, caption=Código empleado en el capítulo \ref{cap:ejemplos de referencias y citas}.]{cuerpo/cap-referencias/codigos/cesar.txt}

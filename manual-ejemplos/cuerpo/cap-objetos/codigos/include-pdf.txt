@@ -1,0 +1,12 @@
+\includepdf[key=val]{filename}
+	key: opción deseada; destacan:
+		pages: elegir las páginas a insertar; por defecto solo la primera; se declara como; pages={m-n}
+			m: primera página a incluir
+			n: última página a incluir
+		landscape
+		frame
+		pagecommand
+		frame
+	val: valor de la opción cuando es necesaria
+	filename: ruta al pdf deseado
+	

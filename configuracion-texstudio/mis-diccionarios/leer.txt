@@ -1,0 +1,1 @@
+Pegar en el directorio de instalación, en la carpeta "dictionaries", y luego cargarlos desde opciones.

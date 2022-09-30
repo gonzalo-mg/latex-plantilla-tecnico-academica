@@ -1,0 +1,50 @@
+% PORTADA
+%
+% Numeración romana minúscula para la portada:
+\pagenumbering{roman}
+%
+% Declaración de inicio de página de portada:
+\begin{titlepage}
+%
+%	Distribución
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\center
+%
+%	CABECERA
+\textsc{\Large \cabecera}\\[0.5cm]
+%
+%	TÍTULO
+\HRule \\[0.4cm]%línea decorativa
+{ \huge \bfseries \titulo}\\[0.4cm]
+\HRule \\[1.5cm]%línea decorativa
+%
+%	AUTOR
+\Large \textbf{Autor}:\\
+\textsc{\textbf{\autor}}\\[1cm]
+%
+%	DNI
+%\large \textbf{DNI:}\\
+%\textbf{XXXXX}\\[1cm]
+%%
+%%	TELÉFONO
+%\large \textbf{Teléfono:}\\
+%\textbf{XXXXX}\\[1cm]
+%%
+%%	CORREO E
+\large \textbf{Correo electrónico:}\\ \href{mailto:}{\ecorreo}\\[1cm]
+%%
+%	FECHA
+\large \textbf{Fecha de redacción:}\\
+\textbf{\today}\\[1cm] 
+%
+%	FIRMA
+%\large \textbf{Firma:}\\[1cm]
+%
+%	LOGO
+%\includegraphics{Logo}\\[1cm]
+%
+%	Distribución
+\vfill% Rellena el sobrante de la página con espacio en blanco
+%
+% Declaración de fin de página de portada
+\end{titlepage}

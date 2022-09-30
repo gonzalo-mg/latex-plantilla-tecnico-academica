@@ -1,0 +1,16 @@
+\part{Anexos}
+% Anexo A
+\input{anexos/macros/macros.tex}
+% Anexo B
+\input{anexos/easyreview/easyreview.tex}
+%
+%	------------------------------------
+%COD	GLOSARIOS
+%-	------------------------------------
+% Al estar tras la declaración de inicio de anexos, los glosarios se consideran como anexos. Al definir cada glosario como un capítulo (\chapter) cada uno es un anexo.
+% Glosario de términos:
+\printunsrtglossary
+% Glosario de siglas y abreviaturas:
+\printunsrtglossary[type=\acronymtype, title=Siglas y Abreviaturas, toctitle=Siglas y Abreviaturas]
+% Glosario de símbolos
+\printunsrtglossary[type=symbols, title=Listado de símbolos, toctitle=Listado de símbolos]

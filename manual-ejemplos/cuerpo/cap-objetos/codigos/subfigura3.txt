@@ -1,0 +1,33 @@
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, frame]{cuerpo/cap-objetos/imagenes/hoi4-v2}
+		\caption{V2.}
+		\label{fig:hoi4-v2}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, frame]{cuerpo/cap-objetos/imagenes/hoi4-normandy-landing}
+		\caption{Desembarco en Normandía.}
+		\label{fig:hoi4-normandia}
+	\end{subfigure}
+	\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, frame]{cuerpo/cap-objetos/imagenes/hoi4-female-worker}
+		\caption{Mujer en fábrica de armamento.}
+		\label{fig:hoi4-female-worker}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, frame]{cuerpo/cap-objetos/imagenes/hoi4-pacific-landing}
+		\caption{Desembarco en el Pacífico.}
+		\label{fig:hoi4-desembarco-pacifico}
+	\end{subfigure}
+	%
+	\caption[Figura con 4 subfiguras.]{Figura con 4 subfiguras - ejemplo 1. Figuras alineadas inferiormente y en una matriz 2x2. Escenas de la Segunda Guerra Mundial.}
+	\label{fig:escenas-ww2}
+\end{figure}

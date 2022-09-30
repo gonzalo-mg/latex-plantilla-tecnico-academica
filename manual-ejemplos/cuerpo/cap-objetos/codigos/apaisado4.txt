@@ -1,0 +1,8 @@
+\begin{landscape}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.65, frame, angle=0]{cuerpo/cap-objetos/imagenes/mapa-fisico}
+		\caption[Figura rotada 4.]{Figura rotada 4. \textit{Método entorno <<landscape>>}: la página se rota automáticamente para aparecer apaisada incluido el pie de página, pero los encabezados no. El tamaño se ha ajustado a un 65\% del tamaño original. Método aconsejado.}
+		\label{fig:mapa-fisico-a4}
+	\end{figure}
+\end{landscape}

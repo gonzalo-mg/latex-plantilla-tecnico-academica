@@ -1,0 +1,12 @@
+% Objetivo del archivo: cargar paquetes y definir los parámetros de la gestión de glosarios para poder crear glosarios de términos, abreviaturas, símbolos.
+%
+\usepackage[toc, automake, acronym, symbols, sort=use]{glossaries-extra}% Multitud de opciones y configuraciones.
+%\setglossarystyle{}
+\makeglossaries% Orden para la ejecución del paquete.
+%
+% Glosario de términos
+\input{glosarios/terminos.tex}% Archivo en que se definen las entradas de términos.
+% Glosario de siglas y abreviaturas
+\input{glosarios/siglas.tex}% Archivo en que se definen las entradas de siglas.
+% Listado de símbolos
+\input{glosarios/simbolos.tex}% Archivo en que se definen las entradas de símbolos.

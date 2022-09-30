@@ -1,0 +1,14 @@
+{
+    "abbrev": "",
+    "description": [
+        "Add a new hyperlink."
+    ],
+    "formatVersion": 1,
+    "menu": "",
+    "name": "Add hyperlink",
+    "shortcut": "",
+    "tag": [
+        "\\href{URL}{TEXTO}"
+    ],
+    "trigger": ""
+}

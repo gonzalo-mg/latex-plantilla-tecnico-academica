@@ -1,0 +1,8 @@
+O corrector hunspell para galego de Trasno habilita a corrección ortográfica, guionización e sinónimos en idioma galego.
+
+Edición «Padre Sobreira» http://gl.wikipedia.org/wiki/Padre_Sobreira
+
+(c) Proxecto Trasno
+Proxecto Trasno agradece as colaboracións da comunidade.
+Para notificar erros ou suxerir novas entradas prema na ligazón arriba á dereita.
+
